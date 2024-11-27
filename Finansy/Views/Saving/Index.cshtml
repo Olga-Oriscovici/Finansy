@@ -1,0 +1,48 @@
+﻿
+@model Finansy.Models.SavingsModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор сбережений</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Калькулятор сбережений</h2>
+        <form asp-action="Index" method="post" class="mt-4">
+            <div class="form-group">
+                <label for="InitialAmount">Начальная сумма:</label>
+                <input type="number" asp-for="InitialAmount" class="form-control" step="0.01" required />
+            </div>
+            <div class="form-group">
+                <label for="MonthlyContribution">Ежемесячный вклад:</label>
+                <input type="number" asp-for="MonthlyContribution" class="form-control" step="0.01" required />
+            </div>
+            <div class="form-group">
+                <label for="AnnualInterestRate">Годовая процентная ставка:</label>
+                <input type="number" asp-for="AnnualInterestRate" class="form-control" step="0.01" required />
+            </div>
+            <div class="form-group">
+                <label for="Years">Количество лет:</label>
+                <input type="number" asp-for="Years" class="form-control" required />
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Рассчитать</button>
+        </form>
+
+        @if (ViewBag.FutureValue != null)
+        {
+            <div class="alert alert-success mt-4">
+                <h3 class="text-center">Будущая стоимость сбережений: @ViewBag.FutureValue</h3>
+            </div>
+        }
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
