@@ -16,5 +16,9 @@ namespace Finansy.Data
         public DbSet<Wastes>Wastes { get; set; }
 
         public DbSet<Expense> Expenses{ get; set; }
+
+        public DbSet<ContactUs> ContactUsEntries { get; set; }
+
+        public DbSet<PricingPlan> PricingPlans { get; set; }
     }
 }

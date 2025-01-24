@@ -7,5 +7,7 @@ namespace Finansy.Models
 
         public IEnumerable<WalletInfo> ?Wallets { get; set; }
         public IEnumerable<Wastes> ?Wastes { get; set; }
+
+        public List<ContactUs> ?Messages { get; set; }
     }
 }

@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Finansy.Models.ContactUs>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var plan in Model)
+        {
+            <tr>
+                <td>@plan.Name</td>
+                <td>@plan.Message</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

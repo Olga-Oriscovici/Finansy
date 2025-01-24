@@ -15,8 +15,8 @@ namespace Finansy.Controllers
             _context = context;
 
         }
-        
-      
+
+
         [HttpGet]
         public IActionResult Admin(string name)
         {
@@ -31,5 +31,7 @@ namespace Finansy.Controllers
 
             return View(viewModel);
         }
+
+        
     }
 }
